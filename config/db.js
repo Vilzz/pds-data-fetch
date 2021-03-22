@@ -1,5 +1,5 @@
 import mongoose from 'mongoose'
-
+import colors from 'colors'
 const connectDB = async (path) => {
   const conn = await mongoose.connect(path, {
     useNewUrlParser: true,
@@ -7,7 +7,7 @@ const connectDB = async (path) => {
     useFindAndModify: false,
     useUnifiedTopology: true,
   })
-  console.log(`MongoDB Connected: ${conn.connection.host}`)
+  console.log(`MongoDB Connected: ${conn.connection.host}`.green)
 }
 
 export default connectDB

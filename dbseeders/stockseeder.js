@@ -6,8 +6,8 @@ dotenv.config({ path: './config/config.env' })
 import connectDB from '../config/db.js'
 connectDB(process.env.MONGO_LOCAL)
 
-import getGroupId from '../groupsMap.js'
-import getProductId from '../productsMap.js'
+import getGroupId from '../maps/groupsMap.js'
+import getProductId from '../maps/productsMap.js'
 import Stock from '../models/Stock.js'
 
 const stockData = JSON.parse(fs.readFileSync('./json/stock.json', 'utf-8'))

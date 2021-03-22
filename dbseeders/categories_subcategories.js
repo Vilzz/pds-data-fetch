@@ -61,4 +61,4 @@ const createSubcategories = async (subcategories, categories) => {
 
 setTimeout(() => {
   createSubcategories(subcategories, categories)
-}, 100)
+}, 1000)

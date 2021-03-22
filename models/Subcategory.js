@@ -25,7 +25,7 @@ const SubcategorySchema = new mongoose.Schema(
     icon: {
       type: String,
     },
-    products: [
+    groups: [
       {
         type: mongoose.Schema.ObjectId,
         ref: 'ProductGroup',
