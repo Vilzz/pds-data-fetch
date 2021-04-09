@@ -1,6 +1,5 @@
 /node_modules
-/images/big
-/images/small
+/images/
 /config/config.env
 /json
 /xml

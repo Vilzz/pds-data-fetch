@@ -7,7 +7,8 @@ const resData = JSON.parse(fileData)
 const { product } = resData.doct
 
 const imagesArray = product.map((item) => {
-  return { link: item.small_image[0].$.src, name: `${item.code[0]}_small` }
+  //return { link: item.small_image[0].$.src, name: `${item.code[0]}_small` }
+  return { link: item.super_big_image[0].$.src, name: `${item.code[0]}_big` }
 })
 
 const withTimeout = (from, to) => {
@@ -27,12 +28,12 @@ const withTimeout = (from, to) => {
     }
 
     if (current < to) {
-      setTimeout(go, 300)
+      setTimeout(go, 350)
     }
     current++
-  }, 300)
+  }, 350)
 }
 
 console.log('Всего изображений', imagesArray.length)
 
-withTimeout(7935, imagesArray.length)
+withTimeout(15965, imagesArray.length)
