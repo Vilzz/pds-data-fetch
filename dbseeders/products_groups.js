@@ -75,10 +75,10 @@ const productsData = () =>
     productGroup.ondemand = item.ondemand ? item.ondemand[0] : false
     productGroup.price = item.price.length > 0 ? item.price[0].price[0] : null
     productGroup.small_img = item.small_image
-      ? `/images/${item.code[0]}_small.jpg`
+      ? `/images/small/${item.code[0]}_small.jpg`
       : ''
     productGroup.big_img = item.super_big_image
-      ? `/images/${item.code[0]}_big.jpg`
+      ? `/images/big/${item.code[0]}_big.jpg`
       : ''
     productGroup.status = item.status ? item.status[0]._ : ''
     productGroup.pack = pack.amount ? pack : {}
